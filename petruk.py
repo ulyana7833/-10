@@ -91,7 +91,7 @@ def print_star_digits():
             ' ***** '
         ]
     }
-    numbers = input("Введите трёхзначное, двухзначное число (цифры пишите через пробел): ").split()
+    numbers = input("Введите число: ")
     output = ["", "", "", "", "", "", ""]
     for number in numbers:
         if number in star_digits:
