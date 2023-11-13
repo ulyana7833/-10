@@ -44,14 +44,60 @@ def print_star_digits():
             '*******',
             '    *  ',
             '    *  '
+        ],
+        '5': [
+            ' ***** ',
+            ' *     ',
+            ' *     ',
+            ' ***** ',
+            '     * ',
+            '     * ',
+            ' ***** '
+        ],
+        '6': [
+            '  ***  ',
+            ' *     ',
+            ' *     ',
+            ' ****  ',
+            ' *   * ',
+            ' *   * ',
+            ' ****  '
+        ],
+        '7': [
+            ' ***** ',
+            '     * ',
+            '    *  ',
+            '   *   ',
+            '  *    ',
+            ' *     ',
+            '*      '
+        ],
+        '8': [
+            ' ***** ',
+            '*     *',
+            '*     *',
+            ' ***** ',
+            '*     *',
+            '*     *',
+            ' ***** '
+        ],
+        '9': [
+            ' ***** ',
+            '*    * ',
+            '*    * ',
+            ' ***** ',
+            '     * ',
+            '     * ',
+            ' ***** '
         ]
     }
-    numbers = input("Введите две цифры через пробел: ").split()
+    numbers = input("Введите трёхзначное число (цифры через пробел): ").split()
+    output = ["", "", "", "", "", "", ""]
     for number in numbers:
         if number in star_digits:
-            for line in star_digits[number]:
-                print(line)
-        else:
-            print("Некорректный ввод. Введите число 0, 1, 2, 3 или 4.")
+            for i, line in enumerate(star_digits[number]):
+                output[i] += line + " "
+    for line in output:
+        print(line)
 
 print_star_digits()
